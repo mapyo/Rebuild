@@ -78,7 +78,7 @@ android {
     buildTypes {
         debug {
             debuggable true
-            runProguard false
+            minifyEnabled false
             versionNameSuffix '.debug'
         }
 
@@ -86,7 +86,7 @@ android {
             release {
                 signingConfig signingConfigs.release
                 debuggable false
-                runProguard true
+                minifyEnabled true
                 proguardFile getDefaultProguardFile('proguard-android-optimize.txt')
                 proguardFile file('proguard-release.txt')
             }
